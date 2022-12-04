@@ -1,161 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <%- include('./layouts/header') %>
 
-    <title><%= title %></title>
-  </head>
+        <title>
+            <%= title %>
+        </title>
+</head>
 
-  <body>
+<body>
     <%- include('./layouts/navbar') %>
 
-    <nav>
-      <p>
-        <button
-          class="btn"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapseWidthExample"
-          aria-expanded="false"
-          aria-controls="collapseWidthExample"
-          width="50px"
-        >
-          <span class="material-symbols-outlined"> menu </span>
-        </button>
-      </p>
-    </nav>
-    <div>
-      <div class="collapse collapse-horizontal" id="collapseWidthExample">
-        <div class="card card-body">
-          <div class="row">
-            <div class="col col-lg-3">
-              <div class="class-info">
-                <img src="<%= img %>" alt="<%= title %>" style="width: 200px" />
-                <h3><b> <%= title %> Class </b></h3>
-                <div class="row">
-                  <div class="col col-sm-1">
-                    <span class="material-symbols-outlined">
-                      account_circle
-                    </span>
-                  </div>
-                  <div class="col">
-                    <h4><%= dosen %></h4>
-                  </div>
-                  <div>
-                    <h5>class code: <%= classCode %></h5>
-                  </div>
+        <nav>
+            <p>
+                <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample"
+                    aria-expanded="false" aria-controls="collapseWidthExample" width="50px">
+                    <span class="material-symbols-outlined"> menu </span>
+                </button>
+            </p>
+        </nav>
+        <div>
+            <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                <div class="card card-body">
+                    <div class="row">
+                        <div class="col col-lg-3">
+                            <div class="class-info">
+                                <img src="<%= img %>" alt="<%= title %>" style="width: 200px" />
+                                <h3><b>
+                                        <%= title %> Class
+                                    </b></h3>
+                                <div class="row">
+                                    <div class="col col-sm-1">
+                                        <span class="material-symbols-outlined">
+                                            account_circle
+                                        </span>
+                                    </div>
+                                    <div class="col">
+                                        <h4>
+                                            <%= dosen %>
+                                        </h4>
+                                    </div>
+                                    <div>
+                                        <h5>class code: <%= classCode %>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-sm-2">
+                            <div class="card card-menu">
+                                <a href="/home">
+                                    <h5>Go Home</h5>
+                                </a>
+                            </div>
+                            <div class="card card-menu">
+                                <a href="/assignment">
+                                    <h5>Assignment</h5>
+                                </a>
+                            </div>
+                            <div class="card card-menu">
+                                <a href="/grades">
+                                    <h5>grades</h5>
+                                </a>
+                            </div>
+                            <div class="card card-menu">
+                                <a href="">
+                                    <h5>Files</h5>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col d-flex justify-content-end align-items-center">
+                            <div class="btn-group">
+                                <button class="btn btn-sm" type="button">
+                                    <span class="material-symbols-outlined"> more_vert </span>
+                                </button>
+                                <button type="button" class="btn btn-sm" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <span class="material-symbols-outlined"> expand_more </span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-item">Add Channel</li>
+                                    <li class="dropdown-item">Add Member</li>
+                                    <li class="dropdown-item">Leave the team</li>
+                                    <li class="dropdown-item">Edit Team</li>
+                                    <li class="dropdown-divider"></li>
+                                    <li class="dropdown-item">Delete the team</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-            <div class="col col-sm-2">
-              <div class="card card-menu">
-                <a href="/home">
-                  <h5>Go Home</h5>
-                </a>
-              </div>
-              <div class="card card-menu">
-                <a href="/assignment">
-                  <h5>Assignment</h5>
-                </a>
-              </div>
-              <div class="card card-menu">
-                <a href="/grades">
-                  <h5>grades</h5>
-                </a>
-              </div>
-              <div class="card card-menu">
-                <a href="">
-                  <h5>Files</h5>
-                </a>
-              </div>
-            </div>
-            <div class="col d-flex justify-content-end align-items-center">
-              <div class="btn-group">
-                <button class="btn btn-sm" type="button">
-                  <span class="material-symbols-outlined"> more_vert </span>
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-sm"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <span class="material-symbols-outlined"> expand_more </span>
-                </button>
-                <ul class="dropdown-menu">
-                  <li class="dropdown-item">Add Channel</li>
-                  <li class="dropdown-item">Add Member</li>
-                  <li class="dropdown-item">Leave the team</li>
-                  <li class="dropdown-item">Edit Team</li>
-                  <li class="dropdown-divider"></li>
-                  <li class="dropdown-item">Delete the team</li>
-                </ul>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-    <div class="feed-container">
-      <div class="card card-header">
-        <div class="row">
-          <div class="col col-sm-1">
-            <span class="material-symbols-outlined"> account_circle </span>
-          </div>
-          <div class="col col-sm-3">
-            <a href="#">
-              <h5><%= dosen %></h5>
-            </a>
-          </div>
-          <div class="col col-sm-3"><%= date %></div>
-          <div class="card card-announce">
-            <div class="row">
-              <div class="col col-sm-1">
-                <span class="material-symbols-outlined"> campaign </span>
-              </div>
-              <div class="col">
-                <h4><%= announce %></h4>
-              </div>
+        <div class="feed-container">
+            <div class="card card-header">
+                <div class="row">
+                    <div class="col col-sm-1">
+                        <span class="material-symbols-outlined"> account_circle </span>
+                    </div>
+                    <div class="col col-sm-3">
+                        <a href="#">
+                            <h5>
+                                <%= dosen %>
+                            </h5>
+                        </a>
+                    </div>
+                    <div class="col col-sm-3">
+                        <%= date %>
+                    </div>
+                    <div class="card card-announce">
+                        <div class="row">
+                            <div class="col col-sm-1">
+                                <span class="material-symbols-outlined"> campaign </span>
+                            </div>
+                            <div class="col">
+                                <h4>
+                                    <%= announce %>
+                                </h4>
+                            </div>
+                        </div>
+                        <p>
+                            <%= isiDosen %>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <p>
-              <%= isiDosen %>
-            </p>
-          </div>
-        </div>
-      </div>
 
-      <br />
+            <br />
 
-      <div class="card card-header">
-        <div class="row">
-          <div class="col col-sm-1">
-            <span class="material-symbols-outlined"> account_circle </span>
-          </div>
-          <div class="col col-sm-3">
-            <a href="#">
-              <h5><%= asdos %></h5>
-            </a>
-          </div>
-          <div class="col col-sm-3"><%= date %>></div>
-          <div class="card card-announce">
-            <div class="row">
-              <div class="col col-sm-1">
-                <span class="material-symbols-outlined"> campaign </span>
-              </div>
-              <div class="col">
-                <h4><%= announce %></h4>
-              </div>
+            <div class="card card-header">
+                <div class="row">
+                    <div class="col col-sm-1">
+                        <span class="material-symbols-outlined"> account_circle </span>
+                    </div>
+                    <div class="col col-sm-3">
+                        <a href="#">
+                            <h5>
+                                <%= asdos %>
+                            </h5>
+                        </a>
+                    </div>
+                    <div class="col col-sm-3">
+                        <%= date %>>
+                    </div>
+                    <div class="card card-announce">
+                        <div class="row">
+                            <div class="col col-sm-1">
+                                <span class="material-symbols-outlined"> campaign </span>
+                            </div>
+                            <div class="col">
+                                <h4>
+                                    <%= announce %>
+                                </h4>
+                            </div>
+                        </div>
+                        <p>
+                            <%= isiAsdos %>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <p>
-              <%= isiAsdos %> 
-            </p>
-          </div>
         </div>
-      </div>
-    </div>
-  </body>
+</body>
+
 </html>
