@@ -343,3 +343,82 @@
                       value=""
                     />
                   </div>
+                </div>
+                <button type="button" class="btn btn-primary">
+                  Update Profile
+                </button>
+                <button type="reset" class="btn btn-light">
+                  Reset Changes
+                </button>
+              </form>
+            </div>
+            <div class="tab-pane" id="account">
+              <h6>ACCOUNT SETTINGS</h6>
+              <hr />
+              <form>
+                <div class="form-group">
+                  <label class="d-block text-danger">Delete Account</label>
+                  <p class="text-muted font-size-sm">
+                    Once you delete your account, there is no going back.
+                    Please be certain.
+                  </p>
+                </div>
+                <button class="btn btn-danger" type="button">
+                  Delete Account
+                </button>
+              </form>
+            </div>
+            <div class="tab-pane" id="security">
+              <h6>SECURITY SETTINGS</h6>
+              <hr />
+              <form>
+                <div class="form-group">
+                  <label class="d-block">Change Password</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter your old password"
+                  />
+                  <input
+                    type="text"
+                    class="form-control mt-1"
+                    placeholder="New password"
+                  />
+                  <input
+                    type="text"
+                    class="form-control mt-1"
+                    placeholder="Confirm new password"
+                  />
+                </div>
+              </form>
+              <hr />
+              <form>
+                <div class="form-group">
+                  <label class="d-block">Two Factor Authentication</label>
+                  <button class="btn btn-info" type="button">
+                    Enable two-factor authentication
+                  </button>
+                  <p class="small text-muted mt-2">
+                    Two-factor authentication adds an additional layer of
+                    security to your account by requiring more than just a
+                    password to log in.
+                  </p>
+                </div>
+              </form>
+            </div>
+            <div class="tab-pane" id="notification">
+              <h6>NOTIFICATION SETTINGS</h6>
+              <hr />
+              <form>
+                <div class="form-group">
+                  <label class="d-block mb-0">Security Alerts</label>
+                  <div class="small text-muted mb-3">
+                    Receive security alert notifications via email
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck1"
+                      checked=""
+                    />
