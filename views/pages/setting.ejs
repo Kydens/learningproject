@@ -138,3 +138,208 @@
                   <circle cx="12" cy="7" r="4"></circle></svg
               ></a>
             </li>
+            <li class="nav-item">
+                <a href="#account" data-toggle="tab" class="nav-link has-icon"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-settings"
+                  >
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path
+                      d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                    ></path></svg
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#security"
+                  data-toggle="tab"
+                  class="nav-link has-icon"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-shield"
+                  >
+                    <path
+                      d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                    ></path></svg
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#notification"
+                  data-toggle="tab"
+                  class="nav-link has-icon"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-bell"
+                  >
+                    <path
+                      d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"
+                    ></path>
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="card-body tab-content">
+            <div class="tab-pane active" id="profile">
+              <h6>YOUR PROFILE INFORMATION</h6>
+              <hr />
+              <form>
+                <div class="card mb-3">
+                  <div class="card-header">Profile Picture</div>
+                  <div class="card-body text-center">
+                    <div class="profile-pic">
+                      <label class="-label" for="file">
+                        <span class="fa fa-camera"></span>
+                        <span>Change Image</span>
+                      </label>
+                      <input
+                        id="file"
+                        type="file"
+                        onchange="loadFile(event)"
+                      />
+                      <img src="assets/user.png" id="output" width="200" />
+                    </div>
+                  </div>
+                </div>
+                <!-- Form Row -->
+                <div class="row gx-3 mb-3">
+                  <!-- Form Group (organization name)-->
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="inputOrgName"
+                      >Your ID</label
+                    >
+                    <input
+                      class="form-control"
+                      id="inputOrgName"
+                      type="text"
+                      placeholder="Enter your ID"
+                      value=""
+                    />
+                  </div>
+                  <!-- Form Group (location)-->
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="inputLocation"
+                      >Faculty</label
+                    >
+                    <input
+                      class="form-control"
+                      id="inputLocation"
+                      type="text"
+                      placeholder="Enter your faculty"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <!-- Form Row-->
+                <div class="row gx-3 mb-3">
+                  <!-- Form Group (first name)-->
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="inputFirstName"
+                      >First name</label
+                    >
+                    <input
+                      class="form-control"
+                      id="inputFirstName"
+                      type="text"
+                      placeholder="Enter your first name"
+                      value=""
+                    />
+                  </div>
+                  <!-- Form Group (last name)-->
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="inputLastName"
+                      >Last name</label
+                    >
+                    <input
+                      class="form-control"
+                      id="inputLastName"
+                      type="text"
+                      placeholder="Enter your last name"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <!-- Form Row        -->
+                <div class="row gx-3 mb-3">
+                  <!-- Form Group (organization name)-->
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="inputLocation"
+                      >Location</label
+                    >
+                    <input
+                      class="form-control"
+                      id="inputLocation"
+                      type="text"
+                      placeholder="Enter your location"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <!-- Form Group (email address)-->
+                <div class="mb-3">
+                  <label class="small mb-1" for="inputEmailAddress"
+                    >Email address</label
+                  >
+                  <input
+                    class="form-control"
+                    id="inputEmailAddress"
+                    type="email"
+                    placeholder="Enter your email address"
+                    value=""
+                  />
+                </div>
+                <!-- Form Row-->
+                <div class="row gx-3 mb-3">
+                  <!-- Form Group (phone number)-->
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="inputPhone"
+                      >Phone number</label
+                    >
+                    <input
+                      class="form-control"
+                      id="inputPhone"
+                      type="tel"
+                      placeholder="Enter your phone number"
+                      value=""
+                    />
+                  </div>
+                  <!-- Form Group (birthday)-->
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="inputBirthday"
+                      >Birthday</label
+                    >
+                    <input
+                      class="form-control"
+                      id="inputBirthday"
+                      type="text"
+                      name="birthday"
+                      placeholder="date/month/birth"
+                      value=""
+                    />
+                  </div>
