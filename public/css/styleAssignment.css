@@ -56,15 +56,14 @@ a {
 }
 
 .card:hover {
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .container .card .list-group .list-group-item .row .col-md-11 .container:hover {
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-
 
 /* Circular Menu */
 
@@ -80,7 +79,7 @@ a {
   height: 3.5em;
   border-radius: 50%;
   background-color: hsl(221, 17%, 49%);
-  box-shadow: 0 2px 5px 0 hsla(0, 0%, 0%, .26);
+  box-shadow: 0 2px 5px 0 hsla(0, 0%, 0%, 0.26);
   color: hsl(0, 0%, 100%);
   text-align: center;
   line-height: 3.9;
@@ -89,16 +88,16 @@ a {
 }
 
 .circular-menu.active .floating-btn {
-  box-shadow: inset 0 0 3px hsla(0, 0%, 0%, .3);
+  box-shadow: inset 0 0 3px hsla(0, 0%, 0%, 0.3);
 }
 
 .circular-menu .floating-btn:active {
-  box-shadow: 0 4px 8px 0 hsla(0, 0%, 0%, .4);
+  box-shadow: 0 4px 8px 0 hsla(0, 0%, 0%, 0.4);
 }
 
 .circular-menu .floating-btn i {
   font-size: 1.3em;
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 
 .circular-menu.active .floating-btn i {
@@ -107,7 +106,7 @@ a {
 
 .circular-menu:after {
   display: block;
-  content: ' ';
+  content: " ";
   width: 3.5em;
   height: 3.5em;
   border-radius: 50%;
@@ -116,12 +115,12 @@ a {
   right: 0;
   z-index: -2;
   background-color: hsl(221, 17%, 49%);
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .circular-menu.active:after {
   transform: scale3d(5.5, 5.5, 1);
-  transition-timing-function: cubic-bezier(.68, 1.55, .265, 1);
+  transition-timing-function: cubic-bezier(0.68, 1.55, 0.265, 1);
 }
 
 .circular-menu .items-wrapper {
@@ -131,8 +130,8 @@ a {
 
 .circular-menu .menu-item {
   position: absolute;
-  top: .2em;
-  right: .2em;
+  top: 0.2em;
+  right: 0.2em;
   z-index: -1;
   display: block;
   text-decoration: none;
@@ -143,12 +142,12 @@ a {
   border-radius: 50%;
   text-align: center;
   line-height: 3;
-  background-color: hsla(0, 0%, 0%, .1);
-  transition: transform .3s ease, background .2s ease;
+  background-color: hsla(0, 0%, 0%, 0.1);
+  transition: transform 0.3s ease, background 0.2s ease;
 }
 
 .circular-menu .menu-item:hover {
-  background-color: hsla(0, 0%, 0%, .3);
+  background-color: hsla(0, 0%, 0%, 0.3);
 }
 
 .circular-menu.active .menu-item {
@@ -175,21 +174,19 @@ a {
   transform: translate3d(-7em, 1em, 0);
 }
 
-
 /* End of Circular Menu */
-
 
 /*style page assignment*/
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 ::selection {
   color: #fff;
-  background: #6990F2;
+  background: #6990f2;
 }
 
 section .row {
   margin-bottom: 10px;
-  background: #E9F0FF;
+  background: #e9f0ff;
   list-style: none;
   padding: 15px 20px;
   border-radius: 5px;
@@ -199,7 +196,7 @@ section .row {
 }
 
 section .row i {
-  color: #6990F2;
+  color: #6990f2;
   font-size: 30px;
 }
 
@@ -230,7 +227,7 @@ section .details span {
 .content .progress-bar .progress {
   height: 100%;
   width: 0%;
-  background: #6990F2;
+  background: #6990f2;
   border-radius: inherit;
 }
 

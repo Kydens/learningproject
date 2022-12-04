@@ -95,6 +95,6 @@ body {
 .card-img-left {
   /* untuk ukuran gambar disebelah kiri login*/
   width: 45%;
-  background: scroll center url('../assets/wp\ login.webp');
+  background: scroll center url("../assets/wp\ login.webp");
   background-size: cover;
 }

@@ -1,44 +1,44 @@
-const form = document.querySelector('form'),
-  fileInput = document.querySelector('.file-input'),
+const form = document.querySelector("form"),
+  fileInput = document.querySelector(".file-input"),
   // fileremove = document.getElementById("").value = "",
-  progressArea = document.querySelector('.progress-area'),
-  uploadedArea = document.querySelector('.uploaded-area')
+  progressArea = document.querySelector(".progress-area"),
+  uploadedArea = document.querySelector(".uploaded-area");
 
 // form click event
-form.addEventListener('click', () => {
-  fileInput.click()
-})
+form.addEventListener("click", () => {
+  fileInput.click();
+});
 
 fileInput.onchange = ({ target }) => {
-  let file = target.files[0] //getting file [0] this means if user has selected multiple files then get first one only
+  let file = target.files[0]; //getting file [0] this means if user has selected multiple files then get first one only
   if (file) {
-    let fileName = file.name //getting file name
+    let fileName = file.name; //getting file name
     if (fileName.length >= 12) {
       //if file name length is greater than 12 then split it and add ...
-      let splitName = fileName.split('.')
-      fileName = splitName[0].substring(0, 13) + '... .' + splitName[1]
+      let splitName = fileName.split(".");
+      fileName = splitName[0].substring(0, 13) + "... ." + splitName[1];
     }
-    uploadFile(fileName) //calling uploadFile with passing file name as an argument
+    uploadFile(fileName); //calling uploadFile with passing file name as an argument
   }
-}
+};
 
 function remove() {
-  const element = document.getElementById('myDIV')
-  element.remove()
+  const element = document.getElementById("myDIV");
+  element.remove();
 }
 // file upload function
 function uploadFile(name) {
-  let xhr = new XMLHttpRequest() //creating new xhr object (AJAX)
-  xhr.open('POST', '#', true) //sending post request to the specified URL
-  xhr.upload.addEventListener('progress', ({ loaded, total }) => {
+  let xhr = new XMLHttpRequest(); //creating new xhr object (AJAX)
+  xhr.open("POST", "#", true); //sending post request to the specified URL
+  xhr.upload.addEventListener("progress", ({ loaded, total }) => {
     //file uploading progress event
-    let fileLoaded = Math.floor((loaded / total) * 100) //getting percentage of loaded file size
-    let fileTotal = Math.floor(total / 1000) //gettting total file size in KB from bytes
-    let fileSize
+    let fileLoaded = Math.floor((loaded / total) * 100); //getting percentage of loaded file size
+    let fileTotal = Math.floor(total / 1000); //gettting total file size in KB from bytes
+    let fileSize;
     // if file size is less than 1024 then add only KB else convert this KB into MB
     fileTotal < 1024
-      ? (fileSize = fileTotal + ' KB')
-      : (fileSize = (loaded / (1024 * 1024)).toFixed(2) + ' MB')
+      ? (fileSize = fileTotal + " KB")
+      : (fileSize = (loaded / (1024 * 1024)).toFixed(2) + " MB");
     let progressHTML = `<li id="myDIV" class="row">
                           <i class="fa fa-file"></i>
                           <div class="content">
@@ -50,12 +50,12 @@ function uploadFile(name) {
                               <div class="progress" style="width: ${fileLoaded}%"></div>
                             </div>
                           </div>
-                        </li>`
+                        </li>`;
     // uploadedArea.innerHTML = ""; //uncomment this line if you don't want to show upload history
-    uploadedArea.classList.add('onprogress')
-    progressArea.innerHTML = progressHTML
+    uploadedArea.classList.add("onprogress");
+    progressArea.innerHTML = progressHTML;
     if (loaded == total) {
-      progressArea.innerHTML = ''
+      progressArea.innerHTML = "";
       let uploadedHTML = `<li id="myDIV" class="row">
                             <div class="content upload">
                               <i class="fa fa-file"></i>
@@ -68,12 +68,12 @@ function uploadFile(name) {
                                 <button type="button" onclick="remove()" style="padding: none; background: transparent; border-left: solid black; border-top: none; border-right: none; border-bottom:none"><i class="fa fa-trash" style="margin:10px"></i></button>
                               </div>
                             </div>
-                          </li>`
-      uploadedArea.classList.remove('onprogress')
+                          </li>`;
+      uploadedArea.classList.remove("onprogress");
       // uploadedArea.innerHTML = uploadedHTML; //uncomment this line if you don't want to show upload history
-      uploadedArea.insertAdjacentHTML('afterbegin', uploadedHTML) //remove this line if you don't want to show upload history
+      uploadedArea.insertAdjacentHTML("afterbegin", uploadedHTML); //remove this line if you don't want to show upload history
     }
-  })
-  let data = new FormData(form) //FormData is an object to easily send form data
-  xhr.send(data) //sending form data
+  });
+  let data = new FormData(form); //FormData is an object to easily send form data
+  xhr.send(data); //sending form data
 }
