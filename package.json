@@ -1,13 +1,16 @@
 {
-  "name": "pertemuan-10",
+  "name": "learningproject",
   "version": "1.0.0",
-  "description": "",
+  "description": "Web Learning App",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "node src/index.js",
     "dev": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Eddy Nathansyah, Ardiansyah Jaya Winata, Apriyanto Chandra, Adyatma Ruliff Brahmantyo",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
