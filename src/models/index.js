@@ -3,6 +3,7 @@ const Users = require('./user');
 
 mongoose.connect(
   'mongodb+srv://eddy535210009:Nathansyah221203@cluster0.ntnptln.mongodb.net/webprogramming?retryWrites=true&w=majority',
+  { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
 const db = mongoose.connection;
